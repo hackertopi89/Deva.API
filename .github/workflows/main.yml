@@ -1,0 +1,9 @@
+import random
+
+def predict_color():
+    colors = ['saffron', 'white', 'green']
+    return random.choice(colors)
+
+# Example usage
+predicted_color = predict_color()
+print(f"The predicted color is: {predicted_color}")
