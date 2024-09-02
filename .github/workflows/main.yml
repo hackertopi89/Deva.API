@@ -1,9 +1,11 @@
-import random
+pip install flask
+from flask import Flask, jsonify
 
-def predict_color():
-    colors = ['saffron', 'white', 'green']
-    return random.choice(colors)
+app = Flask(__name__)
 
-# Example usage
-predicted_color = predict_color()
-print(f"The predicted color is: {predicted_color}")
+@app.route('/api/hello', methods=['GET'])
+def hello():
+    return jsonify({"message": "Hello, World!"})
+
+if __name__ == '__main__':
+    app.run(debug=True)
